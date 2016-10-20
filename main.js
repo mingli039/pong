@@ -17,7 +17,21 @@ window.onload = function(){
 	var firstTime = 0;
 
 	var start = function(){
-
+            var initButtons = false;
+	    var phoneButton = document.getElementById('copyRight');
+	    phoneButton.addEventListner('click', function(){
+		initButtons = true;    
+	    })
+	    if(initButtons){
+		var con = document.getElementById('mnct');
+                var upb = document.createElement('div');
+		upb.className = "phoneButton";
+	        var downb = document.createElement('div');
+		downb.className = "phoneButton";
+		con.appendChild(upb);
+		con.appendChild(downb);
+	    }
+		
 	    //Music
 	    var bg_music;
 	    if(firstTime < 1){
@@ -54,6 +68,9 @@ window.onload = function(){
 
 		var score_player = 0;
 		var score_opponent = 0;
+		
+		var pupb = document.getElementsByClassName('phoneButton')[0];
+		var pdownb = document.getElementsByClassName('phoneButton')[1];
 
 		//Objects
 		var player = {
@@ -64,6 +81,12 @@ window.onload = function(){
 			speed: 5,
 
 			update: function(){
+				pupb.addEventListener('click'){
+					this.y += this.speed;
+				})
+				pupb.addEventListener('click'){
+					this.y -= this.speed;
+				})
 				if(keystate[up]){
 					this.y += this.speed;
 				}
