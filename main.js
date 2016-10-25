@@ -1,3 +1,5 @@
+var pupb;
+var pdownb;
 window.onload = function(){
             var initButtons = false;
 	    var phoneButton = document.getElementById('copyRight');
@@ -12,6 +14,8 @@ window.onload = function(){
 		downb.className = "phoneButton";
 		con.appendChild(upb);
 		con.appendChild(downb);
+		pupb = document.getElementsByClassName('phoneButton')[0];
+		pdownb = document.getElementsByClassName('phoneButton')[1];
 	    }
 	window.addEventListener("keydown", function(e) {
 		// space and arrow keys
@@ -67,9 +71,6 @@ window.onload = function(){
 
 		var score_player = 0;
 		var score_opponent = 0;
-		
-		var pupb = document.getElementsByClassName('phoneButton')[0];
-		var pdownb = document.getElementsByClassName('phoneButton')[1];
 
 		//Objects
 		var player = {
