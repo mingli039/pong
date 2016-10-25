@@ -1,6 +1,8 @@
 window.onload = function(){
             var pupb;
 	    var pdownb;
+	    var phone_up = false;
+	    var phone_down = false;
             var initButtons = false;
 	    var phoneButton = document.getElementById('copyRight');
 	    phoneButton.addEventListener('click', function(){
@@ -17,6 +19,16 @@ window.onload = function(){
 			pdownb = document.getElementsByClassName('phoneButton')[1];
 		    }
 	    })
+				if(initButtons){
+				pupb.addEventListener('click', function(){
+					phone_down = false;
+					phone_up = true;
+				})
+				pdownb.addEventListener('click', function(){
+					phone_up = false;
+					phone_down = true;
+				})	
+				}
 	
 	window.addEventListener("keydown", function(e) {
 		// space and arrow keys
@@ -82,18 +94,11 @@ window.onload = function(){
 			speed: 5,
 
 			update: function(){
-				if(initButtons){
-				pupb.addEventListener('click', function(){
-					this.y += this.speed;
-				})
-				pdownb.addEventListener('click', function(){
-					this.y -= this.speed;
-				})	
-				}
-				if(keystate[up]){
+				
+				if(keystate[up] || phone_up){
 					this.y += this.speed;
 				}
-				if(keystate[down]){
+				if(keystate[down] || phone_down){
 					this.y -= this.speed;
 				}
 
