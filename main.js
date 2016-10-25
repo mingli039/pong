@@ -84,7 +84,7 @@ window.onload = function(){
 				pupb.addEventListener('click', function(){
 					this.y += this.speed;
 				})
-				pupb.addEventListener('click', function(){
+				pdownb.addEventListener('click', function(){
 					this.y -= this.speed;
 				})
 				if(keystate[up]){
