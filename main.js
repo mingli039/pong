@@ -1,5 +1,18 @@
 window.onload = function(){
-
+            var initButtons = false;
+	    var phoneButton = document.getElementById('copyRight');
+	    phoneButton.addEventListener('click', function(){
+		initButtons = true;    
+	    })
+	    if(initButtons){
+		var con = document.getElementById('mnct');
+                var upb = document.createElement('div');
+		upb.className = "phoneButton";
+	        var downb = document.createElement('div');
+		downb.className = "phoneButton";
+		con.appendChild(upb);
+		con.appendChild(downb);
+	    }
 	window.addEventListener("keydown", function(e) {
 		// space and arrow keys
 	    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
@@ -17,20 +30,6 @@ window.onload = function(){
 	var firstTime = 0;
 
 	var start = function(){
-            var initButtons = false;
-	    var phoneButton = document.getElementById('copyRight');
-	    phoneButton.addEventListener('click', function(){
-		initButtons = true;    
-	    })
-	    if(initButtons){
-		var con = document.getElementById('mnct');
-                var upb = document.createElement('div');
-		upb.className = "phoneButton";
-	        var downb = document.createElement('div');
-		downb.className = "phoneButton";
-		con.appendChild(upb);
-		con.appendChild(downb);
-	    }
 		
 	    //Music
 	    var bg_music;
