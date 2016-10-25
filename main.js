@@ -19,7 +19,7 @@ window.onload = function(){
 	var start = function(){
             var initButtons = false;
 	    var phoneButton = document.getElementById('copyRight');
-	    phoneButton.addEventListner('click', function(){
+	    phoneButton.addEventListener('click', function(){
 		initButtons = true;    
 	    })
 	    if(initButtons){
