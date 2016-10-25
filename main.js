@@ -7,7 +7,7 @@ window.onload = function(){
 		initButtons = true;    
 	    })
 	    if(initButtons){
-		var con = document.getElementById('mnct');
+		var con = document.getElementById('mcnt');
                 var upb = document.createElement('div');
 		upb.className = "phoneButton";
 	        var downb = document.createElement('div');
