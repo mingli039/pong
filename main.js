@@ -5,19 +5,18 @@ window.onload = function(){
 	    var phoneButton = document.getElementById('copyRight');
 	    phoneButton.addEventListener('click', function(){
 		initButtons = true;
-		console.log(pupb, pdownb)
+		    if(initButtons){
+			var con = document.getElementById('mcnt');
+			var upb = document.createElement('div');
+			upb.className = "phoneButton";
+			var downb = document.createElement('div');
+			downb.className = "phoneButton";
+			con.appendChild(upb);
+			con.appendChild(downb);
+			pupb = document.getElementsByClassName('phoneButton')[0];
+			pdownb = document.getElementsByClassName('phoneButton')[1];
+		    }
 	    })
-	    if(initButtons){
-		var con = document.getElementById('mcnt');
-                var upb = document.createElement('div');
-		upb.className = "phoneButton";
-	        var downb = document.createElement('div');
-		downb.className = "phoneButton";
-		con.appendChild(upb);
-		con.appendChild(downb);
-		pupb = document.getElementsByClassName('phoneButton')[0];
-		pdownb = document.getElementsByClassName('phoneButton')[1];
-	    }
 	
 	window.addEventListener("keydown", function(e) {
 		// space and arrow keys
