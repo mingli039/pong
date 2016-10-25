@@ -1,6 +1,6 @@
-var pupb;
-var pdownb;
 window.onload = function(){
+            var pupb;
+	    var pdownb;
             var initButtons = false;
 	    var phoneButton = document.getElementById('copyRight');
 	    phoneButton.addEventListener('click', function(){
@@ -16,7 +16,9 @@ window.onload = function(){
 		con.appendChild(downb);
 		pupb = document.getElementsByClassName('phoneButton')[0];
 		pdownb = document.getElementsByClassName('phoneButton')[1];
+		console.log(pupb, pdownb)
 	    }
+	
 	window.addEventListener("keydown", function(e) {
 		// space and arrow keys
 	    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
