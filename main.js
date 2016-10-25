@@ -4,7 +4,8 @@ window.onload = function(){
             var initButtons = false;
 	    var phoneButton = document.getElementById('copyRight');
 	    phoneButton.addEventListener('click', function(){
-		initButtons = true;    
+		initButtons = true;
+		console.log(pupb, pdownb)
 	    })
 	    if(initButtons){
 		var con = document.getElementById('mcnt');
@@ -16,7 +17,6 @@ window.onload = function(){
 		con.appendChild(downb);
 		pupb = document.getElementsByClassName('phoneButton')[0];
 		pdownb = document.getElementsByClassName('phoneButton')[1];
-		console.log(pupb, pdownb)
 	    }
 	
 	window.addEventListener("keydown", function(e) {
