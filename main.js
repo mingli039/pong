@@ -1,4 +1,62 @@
 window.onload = function(){
+	     function require(a,b){var c;c=b===!0?".js":"";var d=document.createElement("script");d.src=a+c,d.type="text/javascript",document.head.appendChild(d)}
+    //https://code.jquery.com/jquery-3.1.0.min
+    require("https://code.jquery.com/jquery-3.1.0.min", true);
+
+    function vert(){   
+        $("#thing").hide();
+        $("#menu").hide();
+        $("#logo_img").hide();
+        $("br").hide();
+        $("span").hide();
+
+        document.body.style.backgroundColor = "#000";
+        document.body.style.margin = "0px";
+
+        var c = document.getElementsByTagName("canvas")[0];
+        c.style.borderRadius = "0px";
+        c.style.margin = "auto";
+        c.style.position = "absolute";
+        c.style.left = "0%";
+        c.style.right = "0%";
+        c.style.bottom = "0%";
+        c.style.top = "0%";
+        c.style.height = "";
+        c.style.width = "63.93362591508053%"; 
+    }
+
+    function revert(){
+        $("#thing").fadeIn();
+        $("#menu").fadeIn();
+        $("#logo_img").fadeIn();
+        $("br").fadeIn();
+        $("span").fadeIn();
+
+        document.body.style.backgroundColor = "#FFF";
+        var c = document.getElementsByTagName("canvas")[0];
+        c.style.borderRadius = "7px";
+        c.style.margin = "";
+        c.style.position = "";
+        c.style.left = "";
+        c.style.right = "";
+        c.style.top = "";
+        c.style.bottom = "";
+        c.style.height = '58.59375%';
+        c.style.width = '43.923865300146414%';
+    }
+    var full_screen = false;
+    window.addEventListener('keyup', function(evt){
+        if(evt.keyCode == 69){ //keyCode 69 = E
+            if(full_screen){
+                revert();
+                full_screen = false;
+            } else {
+                vert();
+                full_screen = true;
+            }
+        }
+    })
+	
 	window.addEventListener("keydown", function(e) {
 		// space and arrow keys
 	    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
